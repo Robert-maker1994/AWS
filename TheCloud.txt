@@ -1,0 +1,63 @@
+The Deployment models of the cloud. 
+Private Cloud: 
+Cloud services used by a single organization, not exposed to the public.
+complete control
+Security for sensitive applications
+Meet specific business needs 
+Public Cloud
+Cloud resources are owned and operated by a third-party cloud service provider delivered over the internet.
+Six advantages of cloud computing.
+Hybrid Cloud
+Keep some servers on-premises and extend some capabilities to the cloud. 
+Control over sensitive assets in your private infrastructure
+Flexibility and cost-effectiveness of the public cloud.
+
+Types of Cloud computing.
+Infrastructure as a Service (IaaS)
+ • Provide building blocks for cloud IT • Provides networking, computers, data storage space • Highest level of flexibility • Easy parallel with traditional on-premises IT
+ Platform as a Service (PaaS) 
+• Removes the need for your organization to manage the underlying infrastructure • Focus on the deployment and management of your applications  
+There are many platforms Elastic Beanstalk AWS 
+Software as a Service (SaaS) 
+• Completed product that is run and managed by the service provide
+Many AWS services. 
+Google APPS GMail etc 
+
+Pricing of the Cloud
+• AWS has 3 pricing fundamentals, following the pay-as-you-go pricing model • Compute: • Pay for compute time • Storage: • Pay for data stored in the Cloud • Data transfer OUT of the Cloud: • Data transfer IN is free • Solves the expensive issue of traditional IT 
+
+
+AWS cloud Overview 
+Regions - are all around the world, is a cluster of data centres. 
+Most AWS services are region. Where should you do it. 
+• Compliance with data governance and legal requirements: data never leaves a region without your explicit permission 
+• Proximity to customers: reduced latency 
+• Available services within a Region: new services and new features aren’t available in every Region 
+• Pricing: pricing varies region to region and is transparent in the service pricing page.
+
+AWS Availability Zones. 
+• Each region has many availability zones (usually 3, min is 2, max is 6). Example: • ap-southeast-2a • ap-southeast-2b • ap-southeast-2c • Each availability zone (AZ) is one or more discrete data centers with redundant power, networking, and connectivity • They’re separate from each other, so that they’re isolated from disasters • They’re connected with high bandwidth, ultra-low latency networking.
+
+Tour of the AWS Console 
+
+AWS has Global Services: 
+• Identity and Access Management (IAM) 
+• Route 53 (DNS service)
+ • CloudFront (Content Delivery Network) 
+• WAF (Web Application Firewall) 
+Most AWS services are Region-scoped: 
+• Amazon EC2 (Infrastructure as a Service) • Elastic Beanstalk (Platform as a Service) • Lambda (Function as a Service) • Rekognition (Software as a Service)
+
+
+Q: You ONLY want to manage Applications and Data. Which type of Cloud Computing model should you use? A:  Platform as a service
+
+Q: Which Global Infrastructure identity is composed of one or more discrete data centers with redundant power, networking, and connectivity, and are used to deploy infrastructure? A : Avaiability Zones
+
+Q: Which Global Infrastructure identity is composed of one or more discrete data centers with redundant power, networking, and connectivity, and are used to deploy infrastructure? A: Dedicated Support Agenct to help you deploy applications
+
+Q: Which are the 3 pricing fundamentals of the AWS Cloud? Compute, Storage and data transfer out of the aws cloud
+
+Q: AWS Regions are composed of? A: Two or more Availability Zones AWS Regions consist of multiple, isolated, and physically separate Availability Zones within a geographic area.
+
+Q: Which of the following is the definition of Cloud Computing? A: On-demand availability of computer systems resources, especially data storage and computing power, without direct active management by the user. 
+

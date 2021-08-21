@@ -1,0 +1,105 @@
+Amazon EC2 
+
+E2C is one of the most popular. 
+• EC2 is one of the most popular of AWS’ offering • EC2 = Elastic Compute Cloud = Infrastructure as a Service • It mainly consists in the capability of : • Renting virtual machines (EC2) • Storing data on virtual drives (EBS) • Distributing load across machines (ELB) • Scaling the services using an auto-scaling group (ASG)
+• Knowing EC2 is fundamental to understand how the Cloud works
+
+EC2 sizing && configuration 
+
+Operating Systems (OS): linux windows or mac
+How much CPU, RAM and storage space (network-attached and hardware) 
+
+EC2 User Data
+You can bootstrap our instances using an EC2 user data. 
+
+Hands-On: Launching an EC2 Instance running Linux
+ • We’ll be launching our first virtual server using the AWS Console • We’ll get a first high-level approach to the various parameters • We’ll see that our web server is launched using EC2 user data • We’ll learn how to start / stop / terminate our instance
+
+You can start an instance in the free tear of AWS. Pick all the default settings and then start and STOP WHEN NOT USING.
+
+EC3 Instances Types 
+
+General-purpose 
+
+m5.2xlarge.  What does this mean?
+
+m: instance class 
+5: generation (AWS improves overtime)
+2xlarge: size within the instance class  (RAM & CPU)
+
+
+
+EC2 Instance Types - Compute Optimized 
+Great for a diversity of workloads such as web servers or code repositories • Balance between: • Compute • Memory • Networking • In the course, we will be using the t2.micro which is a General Purpose EC2 instance
+
+EC2 Instance Types – Compute Optimized 
+• Great for compute-intensive tasks that require high performance processors: • Batch processing workloads • Media transcoding • High performance web servers • High performance computing (HPC) • Scientific modeling & machine learning • Dedicated gaming servers
+
+EC2 Instance Types - Memory Optimized
+• Fast performance for workloads that process large data sets in memory • Use cases: • High performance, relational/non-relational databases • Distributed web scale cache stores • In-memory databases optimized for BI (business intelligence) • Applications performing real-time processing of big unstructured data
+
+EC2 Instance Types - Storage Optimized
+
+ Great for storage-intensive tasks that require high, sequential read and write access to large data sets on local storage • Use cases: • High frequency online transaction processing (OLTP) systems • Relational & NoSQL databases • Cache for in-memory databases (for example, Redis) • Data warehousing applications • Distributed file systems 
+
+
+
+Introduction to Security Groups
+
+Are the undamental of network security in AWS.
+
+Deeper Dive 
+Security groups are acting as a "firewall" on EC" instances.
+They Regulate:
+Access to ports 
+Authorised IP ranges - IPv4 and IPv6 
+Control of inbound network from other to the instance
+control outbound network from the instance to the other
+Source 0.0.0.0/0 means everywhere.
+
+GOOD TO KNOW
+Can be attached to multiple instances 
+Locked down to a region /VPC combination
+Does live "outside " the EC2 - if traffic is blocked the Ec2 instance won't see it.
+
+Clasics ports to know 
+
+22 = SSH 
+21 = FTP 
+22 = SFTP (Secure File Transfer Protocol)
+80 = HTTP - access unsecured websites
+443 = HTTPS - access secured website 
+3389 = RDP (Remote Desktop Protocal) 
+TCP = ()
+
+EC2 Instance Connect • Connect to your EC2 instance within your browser • No need to use your key file that was downloaded • The “magic” is that a temporary key is uploaded onto EC2 by AWS • Works only out-of-the-box with Amazon Linux 2 • Need to make sure the port 22 is still opened!
+
+When you connect to your amazon instances never ever configure your IAM user credentials. Instead, you have to use IAM Roles. Give the Instance a role. IAMacessRoles. This is an example of our responsibility in AWS. 
+
+EC2 Instances Purchasing Options
+ • On-Demand Instances: short workload, predictable pricing • Reserved: (MINIMUM 1 year) • Reserved Instances: long workloads • Convertible Reserved Instances: long workloads with flexible instances • Scheduled Reserved Instances: example – every Thursday between 3 and 6 pm • Spot Instances: short workloads, cheap, can lose instances (less reliable) • Dedicated Hosts: book an entire physical server, control instance placement • Dedicated Instances: no other customers will share your hardware
+
+EC2 Reserved Instances 
+• Up to 72% discount compared to On-demand • Reservation period: 1 year = + discount | 3 years = +++ discount • Purchasing options: no upfront | partial upfront = + | All upfront = ++ discount • Reserve a specific instance type • Recommended for steady-state usage applications (think database) • Convertible Reserved Instance • can change the EC2 instance type • Up to 45% discount • Scheduled Reserved Instances • launch within time window you reserve • When you require a fraction of day / week / month • Commitment for 1 year only 
+
+EC2 Spot Instances 
+• Can get a discount of up to 90% compared to On-demand • Instances that you can “lose” at any point of time if your max price is less than the current spot price • The MOST cost-efficient instances in AWS • Useful for workloads that are resilient to failure • Batch jobs • Data analysis • Image processing • Any distributed workloads • Workloads with a flexible start and end time •
+ Not suitable for critical jobs or databases
+
+EC2 On-Demand 
+
+
+
+Shared Responsibility Model for ec2 
+
+• Infrastructure (global network security) • Isolation on physical hosts • Replacing faulty hardware • Compliance validation 
+
+• Security Groups rules • Operating-system patches and updates • Software and utilities installed on the EC2 instance • IAM Roles assigned to EC2 & IAM user access management • Data security on your instance
+
+EC2 Section – Summary 
+• EC2 Instance: AMI (OS) + Instance Size (CPU + RAM) + Storage + security groups + EC2 User Data • Security Groups: Firewall attached to the EC2 instance • EC2 User Data: Script launched at the first start of an instance • SSH: start a terminal into our EC2 Instances (port 22) • EC2 Instance Role: link to IAM roles • Purchasing Options: On-Demand, Spot, Reserved (Standard + Convertible + Scheduled), Dedicated Host, Dedicated Instance
+
+Q: Which network security tool can you use to control traffic in and out of EC2 Instances? :A  Security Groups 
+
+:Q: A company would like to deploy a high-performance computing (HPC) application on EC2. Which EC2 instance type should it choose? A : Compute Optimized 
+Compute Optimized EC2 instances are great for compute-intensive workloads requiring high-performance processors, such as batch processing, media transcoding, high-performance web servers, high performance computing, scientific modeling & machine learning, and dedicated gaming servers.
