@@ -1,0 +1,32 @@
+Scalability  & High Availability 
+
+Vertical Scalability -  means increasing the size of the instance. for example increasing the t2.micro to a t2.large. Vertical SScalability is very connon for non distributed systems suck has databases.
+
+Horizontal Scalability - Means increasing the number of instances / Systems for your application
+Horizontal scaling implies distributed systems. 
+This is very common for web applications / modern applications. 
+Its easy to horizontally scale thanks to the cloud offering Amazon EC2
+
+High availability 
+• High Availability usually goes hand in hand with horizontal scaling
+ • High availability means running your application/system in at least 2 Availability Zones • The goal of high availability is to survive a data centre loss (disaster)
+
+Scalability:
+ ability to accommodate a larger load by making the hardware stronger (scale-up), or by adding nodes (scale-out) 
+ Elasticity:
+ once a system is scalable, elasticity means that there will be some “auto-scaling” so that the system can scale based on the load. This is “cloud-friendly”: pay-per-use, match demand, optimize costs 
+Agility:
+ (not related to scalability - distractor) new IT resources are only a click away, which means that you reduce the time to make those resources available to your developers from weeks to just minutes.
+
+Load Balancing? 
+Load balancers are servers that forward internet traffic to multiple servers (EC2 Instances) downstream
+• Spread load across multiple downstream instances • Expose a single point of access (DNS) to your application • Seamlessly handle failures of downstream instances • Do regular health checks to your instances • Provide SSL termination (HTTPS) for your websites • High availability across zones 
+
+Elastic Load balancer 
+
+
+
+
+
+What’s an Auto Scaling Group? 
+• In real-life, the load on your websites and application can change • In the cloud, you can create and get rid of servers very quickly • The goal of an Auto Scaling Group (ASG) is to: • Scale out (add EC2 instances) to match an increased load • Scale in (remove EC2 instances) to match a decreased load • Ensure we have a minimum and a maximum number of machines running • Automatically register new instances to a load balancer • Replace unhealthy instances • Cost Savings: only run at an optimal capacity (principle of the cloud)
